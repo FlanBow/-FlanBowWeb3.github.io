@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style___header_home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez">
+
+<head>
+    <title>FlanBow</title>
+    <link rel="icon" type="image/x-icon" href="Flan Web Files/FlanWeb_favicon.png">
+</head>
+
+<body class="flan-home-body">
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            
+            <div class="logo-container">
+			    <a href="index.html">
+                    <h3 class="logo">Flan</h3>
+				</a>
+			    <a href="index.html" class="flan-home-link">
+			        <img class="logo-image" src="Flan Web Files/LOGOGIF_COLORTHIS_THIS_THIS.gif"></img>
+				</a>
+			    <a href="index.html">
+                    <h3 class="logo">Bow</h3>
+				</a>
+            </div>
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .85s">
+                            <a>Works<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="index_works_bestillustration.html">Illustration</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a style="border-radius: 0rem 0rem 1rem 1rem;" href="index_works_bestanimation.html">Animation</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="https://www.redbubble.com/es/shop/flanbow" target="_blank">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+	<section>
+	<div class="flan-slideshow">
+	        <div class="flan-slides fade">
+                <img src="https://64.media.tumblr.com/d6e28fc5ecc111068ea58242b0d7004c/75d68c966871f6a4-68/s1280x1920/9bec45de6dee47081fef1a65f4abfee5604f4998.jpg">
+                <div class="flan-slide-text">AYAKA is besto waifu</div>
+            </div>
+            <div class="flan-slides fade">
+                <img src="https://64.media.tumblr.com/a5286d0267fde0be1b658b19451c9523/b0d6e9bafc17fa55-bd/s1280x1920/6edbbda1d639a1ff7c7c2f43d61f68b750abc009.jpg">
+                <div class="flan-slide-text">CORIA dEl RÍo</div>
+            </div>
+            <div class="flan-slides fade">
+                <img src="https://64.media.tumblr.com/88654716840813a90159ac803a8c3afb/7856219c00e8efe0-c0/s1280x1920/14d458588fc24b617bea7e0ec2c01e4ebe7a8961.gifv">
+                <div class="flan-slide-text">FUTARINO</div>
+            </div>
+        <br>
+        <div style="text-align:center">
+            <span class="flan-slide-dot"></span> 
+            <span class="flan-slide-dot"></span> 
+            <span class="flan-slide-dot"></span> 
+        </div>
+	</div>
+	</section>
+	<section class="flan-full-section">
+	    <div class="flan-section">	
+            <div class="flan-section-img1">
+				<img src="Flan Web Files/me-27_03_2020-ANIMATION-circle_small.gif"></img>
+            </div>
+            <div class="flan-section-text">
+                <h1>Hello!<h1>
+				<h1>I'm FlanBow, nice to meet you!<h1>
+	            <a> I am a curious, organized person, who likes art, music, stories, languages, and learning. <br/> I also love collaborating with people.</a>
+            </div>
+	    </div>
+	</section>
+	
+    <footer class="flan-footer">
+        <div class="flan-footer-content">
+	        <h1> CONTACT </H1>
+		    <ul class="flan-footer-socials">
+		        <li><a href="https://twitter.com/flanbow_art" target="blank"><i class="fa fa-twitter"></i></a></li>
+		        <li><a href="https://www.youtube.com/user/RaenbowLady" target="blank"><i class="fa fa-youtube"></i></a></li>
+		        <li><a href="https://www.instagram.com/flanbow/" target="blank"><i class="fa fa-instagram"></i></a></li>
+		        <li><a href="mailto:reinboko@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+	    </div>
+		<div class="flan-footer-bottom">
+		    <h6>Design & Code by &copy;<span><a href="index.html">FlanBow</a></span></h6>
+		</div>
+    </footer>
+  
+</body>
+
+<script>
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("flan-slides");
+        let dots = document.getElementsByClassName("flan-slide-dot");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+        slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    } ////////////////////////////////////////////////////////////////////////////// flan-slideshow is now automatic
+
+    var my_element = document.getElementById("flan-about");
+        my_element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+    });   //////////////////////////////////////////////////////////////////////////////// will scroll to flan-about
+	
+	var my_element = document.getElementById("flan-footer");
+        my_element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+    });   /////////////////////////////////////////////////////////////////////////////// will scroll to flan-footer
+	
+</script>
+
+</html>
